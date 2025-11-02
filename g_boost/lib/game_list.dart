@@ -64,7 +64,6 @@ class GameList extends StatelessWidget {
                               borderRadius: BorderRadius.circular(22),
                               child: Image.asset(
                                 game['image']!,
-                                color: Color(0xFFede6e4),
                                 fit: BoxFit.cover,
                                 width: double.infinity,
                               ),
