@@ -1,3 +1,4 @@
+import 'home_page.dart';
 import 'package:flutter/material.dart';
 
 class GameList extends StatelessWidget {
@@ -7,7 +8,7 @@ class GameList extends StatelessWidget {
   Widget build(BuildContext context) {
     final games = [
       {'title': 'Magic Chess: Go Go', 'image': 'assets/magic_chess.jpg'},
-      {'title': 'Zenless Zone Zero', 'image': 'assets/zenless_zone_zero.jpg'},
+      {'title': 'The Finals', 'image': 'assets/the_finals.jpg'},
       {'title': 'Honor of Kings', 'image': 'assets/honor_of_kings.jpg'},
       {'title': 'Ghost Story: Love Destiny', 'image': 'assets/ghost_story.jpg'},
       {'title': 'Chamet', 'image': 'assets/chamet.jpg'},
@@ -22,6 +23,25 @@ class GameList extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: const Color(0xFFefa75c),
+      appBar: AppBar(
+        backgroundColor: const Color(0xFFefa75c),
+        title: const Text(
+          'POPULAR GAMES',
+          style: TextStyle(
+            fontWeight: FontWeight.w900,
+            fontSize: 30,
+          ),
+        ),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => const HomePage()),
+            );
+          },
+        ),
+      ),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
