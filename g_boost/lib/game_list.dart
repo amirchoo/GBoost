@@ -26,14 +26,15 @@ class GameList extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: const Color(0xFFefa75c),
         title: const Text(
-          'POPULAR GAMES',
+          'GAME LIST',
           style: TextStyle(
             fontWeight: FontWeight.w900,
             fontSize: 30,
+            color: Colors.white,
           ),
         ),
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () {
             Navigator.pushReplacement(
               context,
@@ -48,17 +49,6 @@ class GameList extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              //MAIN TEXT
-              Text(
-                'POPULAR GAMES',
-                style: TextStyle(
-                  fontSize: 40,
-                  fontWeight: FontWeight.w900,
-                  color: Colors.white,
-                  letterSpacing: 2,
-                ),
-              ),
-              const SizedBox(height: 12),
               Expanded(
                 child: GridView.builder(
                   itemCount: games.length,
@@ -89,7 +79,6 @@ class GameList extends StatelessWidget {
                               ),
                             ),
                           ),
-                          // Adding all button of game choice
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Text(
