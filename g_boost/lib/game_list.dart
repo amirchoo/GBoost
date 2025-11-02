@@ -69,6 +69,7 @@ class GameList extends StatelessWidget {
                               ),
                             ),
                           ),
+                          // Adding all button of game choice
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Text(
