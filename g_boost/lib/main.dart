@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:g_boost/login_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'home_page.dart';
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'JokiBersama',
       theme: ThemeData(primarySwatch: Colors.deepOrange,textTheme: GoogleFonts.archivoBlackTextTheme(), ),
-      home: const HomePage(),
+      home: const LoginPage(),
     );
   }
 }
