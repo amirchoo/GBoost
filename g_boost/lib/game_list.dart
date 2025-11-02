@@ -21,7 +21,7 @@ class GameList extends StatelessWidget {
     ];
 
     return Scaffold(
-      backgroundColor: const Color(0xFF370045),
+      backgroundColor: const Color(0xFFefa75c),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
@@ -51,7 +51,7 @@ class GameList extends StatelessWidget {
                   itemBuilder: (context, index) {
                     final game = games[index];
                     return Card(
-                      color: const Color(0xFF390D50),
+                      color: const Color(0xFF2b1d18),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(22),
                       ),
@@ -64,6 +64,7 @@ class GameList extends StatelessWidget {
                               borderRadius: BorderRadius.circular(22),
                               child: Image.asset(
                                 game['image']!,
+                                color: Color(0xFFede6e4),
                                 fit: BoxFit.cover,
                                 width: double.infinity,
                               ),
