@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'home_page.dart'; // 👈 after login, it’ll navigate here
+import 'package:g_boost/register_page.dart';
+import 'home_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -30,8 +31,9 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   void _register() {
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('Registration coming soon 😎')),
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => RegisterPage()),
     );
   }
 
